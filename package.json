@@ -2,14 +2,15 @@
   "name": "cricketoracleb",
   "version": "1.0.0",
   "description": "",
-  "license": "ISC",
+  "license": "ISC", 
   "author": "",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "migrate": "prisma migrate deploy",
-    "prestart": "npm install prisma --save && npm run migrate"
+    "postinstall": "prisma generate",
+    "prestart": "npm run migrate"
   },
   "dependencies": {
     "@prisma/client": "^6.5.0",
