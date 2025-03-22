@@ -15,6 +15,6 @@ datasource db {
 
 model PhoneNumber {
   id        Int      @id @default(autoincrement())
-  number    String   @unique @db.VarChar(10) // 10-digit phone number
+  number    String   @db.VarChar(10) // 10-digit phone number
   createdAt DateTime @default(now())
 }
